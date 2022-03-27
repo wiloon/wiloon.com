@@ -131,12 +131,15 @@ https://blog.csdn.net/hongweigg/article/details/41517025
     net start wuauserv
 ```
 #### 旧版本的系统
-    搜索>磁盘清理》清理系统文件
+    搜索>磁盘清理(disk cleanup)》清理系统文件
 
-#### win 11 虚拟内存, pagefile.sys
-
+#### pagefile.sys
+#####  win 11 虚拟内存, 
 搜索 性能选项
     > 高级>虚拟内存>更改>重启
+##### win 10
+
+点击 此电脑，然后右键打开属性，然后高级系统设置。点击“高级”，然后点击 设置。再次点击“高级”，然后点击 更改。将默认勾选的“自动管理所有驱动器的分页文件大小”选项取消；
 
 #### hiberfil.sys
 
