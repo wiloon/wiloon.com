@@ -10,6 +10,7 @@ tags:
   - reprint
 ---
 ## windows basic, win basic
+
 ## win10 开机启动
 
 ```
@@ -42,9 +43,11 @@ https://uupdump.net/
 >nul避免屏幕输出，将输出输入到空设备，因为不需要结果，仅用到其定时功能。   
 
 ### 查看开放端口
+
 netstat -an|find "61616"
 
 ### windows 服务
+
     # 不带参数的 net start 显示正在运行服务的列表
     net start
     # 启动服务
@@ -121,7 +124,9 @@ windows设置>控制面板>更改账户类型>添加>
 https://blog.csdn.net/hongweigg/article/details/41517025
 
 ### 清理c盘空间, windows清理硬盘空间, windows清理磁盘空间
+
 #### 升级包
+
 ```bash
     # win11 没有这个目录
     rmdir C:\Windows\SoftwareDistribution.old
@@ -130,13 +135,17 @@ https://blog.csdn.net/hongweigg/article/details/41517025
     ren C:\Windows\SoftwareDistribution C:\Windows\SoftwareDistribution.bak
     net start wuauserv
 ```
+
 #### 旧版本的系统
     搜索>磁盘清理(disk cleanup)》清理系统文件
 
 #### pagefile.sys
-#####  win 11 虚拟内存, 
+
+#####  win 11 虚拟内存
+
 搜索 性能选项
     > 高级>虚拟内存>更改>重启
+
 ##### win 10
 
 点击 此电脑，然后右键打开属性，然后高级系统设置。点击“高级”，然后点击 设置。再次点击“高级”，然后点击 更改。将默认勾选的“自动管理所有驱动器的分页文件大小”选项取消；
