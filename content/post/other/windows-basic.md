@@ -110,8 +110,8 @@ windows设置>控制面板>更改账户类型>添加>
 为网卡重新从DHCP服务器上面获取新的IP地址。
 
 ### 解除防ping
-    https://blog.csdn.net/wudinaniya/article/details/80956158
 
+    https://blog.csdn.net/wudinaniya/article/details/80956158
 
 ### netstat
 
@@ -137,6 +137,7 @@ https://blog.csdn.net/hongweigg/article/details/41517025
 ```
 
 #### 旧版本的系统
+
     搜索>磁盘清理(disk cleanup)》清理系统文件
 
 #### pagefile.sys
