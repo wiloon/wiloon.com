@@ -23,7 +23,7 @@ cd python3-env
 python3 -m venv my_env
 source my_env/bin/activate
 
-><https://www.digitalocean.com/community/tutorials/ubuntu-18-04-python-3-zh>
+<https://www.digitalocean.com/community/tutorials/ubuntu-18-04-python-3-zh>
 
 ### debian
 
@@ -81,8 +81,7 @@ print type(a),type(b)
 
 <http://laocao.blog.51cto.com/480714/525140>
 
-[python]
-
+```python
 # !/usr/bin/python
   
 import os,sys
@@ -98,5 +97,29 @@ for line in list:
 path = os.path.join(dir, line)
 
 print path
+```
 
-[/python]
+```python
+import os
+import sys
+// 打开文件，只读
+f = open("/root/tmp/ip.txt", "r")
+// 读取文件
+lines = f.readlines()
+// 字符串长度
+print(len(lines))
+// for 循环
+for line in lines:
+// 去空格
+    line = line.strip()
+    command = "ansible '" + line + "' -m shell -a 'systemctl start filebeat'"
+    print(command)
+    // 等待用户 输入
+    value = input("press any key to continue:")
+    // 判断字符串相等
+    if value == "q":
+    // 退出
+        sys.exit(0)
+        // 执行 shwll 命令
+    os.system(command)
+```
