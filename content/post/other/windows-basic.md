@@ -25,7 +25,7 @@ shell:startup
 
 ### msdn i tell u
 
-><https://www.itellu.com/2021/06/22/win11-v2021-v1/>
+<https://www.itellu.com/2021/06/22/win11-v2021-v1/>
 
 ### windows iso
 
@@ -35,6 +35,7 @@ shell:startup
 选择 "为另一台电脑创建安装介质"
 
 ### uupdump
+
 <https://uupdump.net/>
 
 ### 查看windows的版本
@@ -97,6 +98,12 @@ netstat -ano|findstr 8080
 ### LTSC
 
 Windows Server vNext Long-Term Servicing Channel (LTSC)
+
+<https://technichero.com/download-windows-10-ltsc/>
+
+<https://www.cybermania.ws/software/windows-10-enterprise-ltsc-2021-19044-1288/comment-page-1/>
+
+<https://sysin.org/blog/windows-10-ltsc-2021/>
 
 ### 启动项
 
