@@ -12,34 +12,43 @@ tags:
 
 ## win10 开机启动
 
-```
+```r
 win + r
 shell:startup
 将该应用的快捷方式从文件位置复制并粘贴到“启动”文件夹中。
 
 ```
+
 ### msdn i tell u
->https://www.itellu.com/2021/06/22/win11-v2021-v1/
+
+<https://www.itellu.com/2021/06/22/win11-v2021-v1/>
 
 ### windows iso
-打开页面: https://www.microsoft.com/zh-cn/software-download/windows10
+
+打开页面: <https://www.microsoft.com/zh-cn/software-download/windows10>
 点击 立即下载工具
 运行 MediaCreationTool21H1.exe
 选择 "为另一台电脑创建安装介质"
 
 ### uupdump
-https://uupdump.net/
+
+<https://uupdump.net/>
+
 ### 查看windows的版本
+
     winver
+
 ### bat脚本控制网卡启用禁用
+
     netsh interface set interface "eth0" disabled
     netsh interface set interface "eth0" enabled
 
 ### Windows 命令行 (批处理文件) 延迟 (sleep) 方法, 使用ping 的定时功能，精度1秒
+
     ping -n 3 127.0.0.1>nul
 
-说明: 3为ping包发送次数，可作为延迟秒数进行使用，需要延迟几秒就设置几。   
->nul避免屏幕输出，将输出输入到空设备，因为不需要结果，仅用到其定时功能。   
+说明: 3为ping包发送次数，可作为延迟秒数进行使用，需要延迟几秒就设置几。
+>nul避免屏幕输出，将输出输入到空设备，因为不需要结果，仅用到其定时功能。
 
 ### 查看开放端口
 
@@ -55,13 +64,14 @@ netstat -an|find "61616"
     net stop wuauserv
 
 ### 删除目录
+
     rmdir  
     rmdir /s/q foo
     # /s 是代表删除所有子目录跟其中的档案。 
     # /q 是不要它在删除档案或目录时，不再问我 Yes or No 的动作。 
 
-
 ### netstat
+
 ```bash
 netstat -ano|findstr 8080
 ```
@@ -74,38 +84,58 @@ netstat -ano|findstr 8080
 -o 显示与每个连接相关的所属进程 ID。
 
 ### windows  剪贴板进程
+
     rdpclip.exe
+
 ### hosts
+
     C:\windows\System32\Drivers\Etc\hosts
 
 ### LTSC
+
 Windows Server vNext Long-Term Servicing Channel (LTSC)
 
+<https://technichero.com/download-windows-10-ltsc/>
+
+<https://www.cybermania.ws/software/windows-10-enterprise-ltsc-2021-19044-1288/comment-page-1/>
+
+<https://sysin.org/blog/windows-10-ltsc-2021/>
+
 ### 启动项
+
 把bat脚本复制到以下目录
+
 #### 系统级
+
     C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp
+
 #### 用户级
+
     Win+R
     输入: shell:startup
     系统自动打开以下目录
     C:\Users\user0\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 ### windows凭据
+
     控制面板\用户帐户\凭据管理器 > windows凭据
 
 ### 域用户
+
 windows设置>控制面板>更改账户类型>添加>
 用户名: <域用户名>
 域: <域>
 
 ### ipconfig
-在Windows系统下IPconfig命令，后面带/release和 /renew参数可以实现从DHCP服务器重新获取IP地址: 
 
-#### ipconfig /release 
+在Windows系统下IPconfig命令，后面带/release和 /renew参数可以实现从DHCP服务器重新获取IP地址:
+
+#### ipconfig /release
+
 释放当前网卡获取的IP地址，使用该命令后，网卡 (IPv4地址) 此时IP地址为空。
 
-#### ipconfig /renew 
+#### ipconfig /renew
+
 为网卡重新从DHCP服务器上面获取新的IP地址。
 
 ### 解除防ping
@@ -120,7 +150,7 @@ windows设置>控制面板>更改账户类型>添加>
 
     tasklist | findstr <pid>
 
-https://blog.csdn.net/hongweigg/article/details/41517025
+<https://blog.csdn.net/hongweigg/article/details/41517025>
 
 ### 清理c盘空间, windows清理硬盘空间, windows清理磁盘空间
 
@@ -141,7 +171,7 @@ https://blog.csdn.net/hongweigg/article/details/41517025
 
 #### pagefile.sys
 
-#####  win 11 虚拟内存
+##### win 11 虚拟内存
 
 搜索 性能选项
     > 高级>虚拟内存>更改>重启
