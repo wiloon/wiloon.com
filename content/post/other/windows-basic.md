@@ -70,7 +70,7 @@ netstat -an|find "61616"
     # /s 是代表删除所有子目录跟其中的档案。 
     # /q 是不要它在删除档案或目录时，不再问我 Yes or No 的动作。 
 
-### netstat
+### netstat， windows 查端口
 
 ```bash
 netstat -ano|findstr 8080
@@ -82,6 +82,8 @@ netstat -ano|findstr 8080
 
 -n 以数字形式显示地址和端口号。
 -o 显示与每个连接相关的所属进程 ID。
+
+<https://blog.csdn.net/hsd2012/article/details/50759017>
 
 ### windows  剪贴板进程
 
