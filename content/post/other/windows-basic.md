@@ -10,6 +10,10 @@ tags:
 ---
 ## windows basic, win basic
 
+## ISO
+
+<https://isofiles.bd581e55.workers.dev/>
+
 ## win10 开机启动
 
 ```r
