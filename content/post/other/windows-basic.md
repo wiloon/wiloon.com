@@ -173,14 +173,14 @@ windows设置>控制面板>更改账户类型>添加>
 
 #### 旧版本的系统
 
-    搜索>磁盘清理(disk cleanup)》清理系统文件
+搜索> 磁盘清理(disk cleanup)> 清理系统文件
 
 #### pagefile.sys
 
-##### win 11 虚拟内存
-
-搜索 性能选项
-    > 高级>虚拟内存>更改>重启
+- win 10 虚拟内存
+搜索高级系统设置> 高级> 性能> 设置> 性能选项> 高级> 
+- win 11 虚拟内存
+搜索 性能选项> 高级> 虚拟内存> 更改> 重启
 
 ##### win 10
 
@@ -188,8 +188,10 @@ windows设置>控制面板>更改账户类型>添加>
 
 #### hiberfil.sys
 
-    powercfg.exe /hibernate off
-    powercfg.exe /hibernate on
+```r
+powercfg.exe /hibernate off
+powercfg.exe /hibernate on
+```
 
 ## win10 安全模式
 
