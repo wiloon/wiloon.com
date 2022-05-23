@@ -123,3 +123,7 @@ for line in lines:
         // 执行 shwll 命令
     os.system(command)
 ```
+
+## python 书
+
+<https://zhuanlan.zhihu.com/p/34378860>
