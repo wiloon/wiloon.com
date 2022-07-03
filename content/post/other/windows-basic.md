@@ -196,3 +196,7 @@ powercfg.exe /hibernate on
 ## win10 安全模式
 
 开始-电源按钮，按住Shift同时点击“重启”，然后Win10会自动进入高级启动菜单，再点击疑难解答-高级选项-启动设置-重启。
+
+## windows 命令行设置 IP
+
+<https://www.ithome.com/0/143/741.htm>
