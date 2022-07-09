@@ -268,3 +268,10 @@ pickle.load(file)
 任意无符号的对象，以逗号隔开，默认为元组
 
 <https://zhuanlan.zhihu.com/p/210779471>
+
+## Python -m
+
+通过python -m执行一个包内脚本会首先将执行package1的__init__.py文件，并且__package__变量被赋上相应的值；而 python xxx.py方式不会执行__init__.py并且__package__变量为None
+两种执行方法的sys.path不同（注意每个path输出中的第一条），Python中的sys.path是Python用来搜索包和模块的路径。通过python -m执行一个脚本时会将当前路径加入到系统路径中,而使用python xxx.py执行脚本则会将脚本所在文件夹加入到系统路径中（如果取消inner.py中的注释会报找不到模块的错误）。
+
+<https://a7744hsc.github.io/python/2018/05/03/Run-python-script.html>
