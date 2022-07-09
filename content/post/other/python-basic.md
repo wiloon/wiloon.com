@@ -10,6 +10,26 @@ tags:
 ---
 ## python basic
 
+Python 3 >=3.4 这些版本的 Python 会一并安装 pip
+
+## commands
+
+```bash
+# 打印包版本
+pip list
+pip install "setuptools<58.0.0"
+pip install -r requirements.txt
+pip freeze #查看当前安装库版本
+#创建 requirements.txt 文件，其中包含了当前环境中所有包及 各自的版本的简单列表
+#保持部署相同，一键安装所有包
+pip install -r requirements.txt
+pip freeze > requirements.txt 
+lsvirtualenv    #列举所有的环境
+cdvirtualenv    #导航到当前激活的虚拟环境的目录中，相当于pushd 目录
+cdsitepackages   # 和上面的类似，直接进入到 site-packages 目录
+lssitepackages     #显示 site-packages 目录中的内容
+```
+
 ## 查看 python 的版本, python version
 
 ```bash
@@ -268,3 +288,79 @@ pickle.load(file)
 任意无符号的对象，以逗号隔开，默认为元组
 
 <https://zhuanlan.zhihu.com/p/210779471>
+
+## python 虚拟环境
+
+- PyPA：指 Python Packaging Authority，一个维护 Python 打包相关项目的小组，相关项目具体见 <https://github.com/pypa>。
+- pip：Python 包安装器。
+- virtualenv：Python 虚拟环境管理工具。
+- venv：Python 标准库内置的虚拟环境管理工具，Python 3.3 加入，Python 3.5 开始作为管理虚拟环境的推荐工具，用法类似 virtualenv。如果你使用 Python 3，推荐使用 venv 来替代 virtualenv。
+
+```bash
+# 创建运行环境
+python -m venv env0
+# 激活环境
+source env0/bin/activate
+# 退出环境
+deactivate
+ 
+```
+
+删除环境
+没有使用virtualenvwrapper前，可以直接删除venv文件夹来删除环境
+
+## Virtualenvwrapper
+
+Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
+
+```bash
+# 安装
+# on macOS / Linux
+pip install --user virtualenvwrapper
+
+echo "source virtualenvwrapper.sh" >> ~/.zshrc
+source ~/.zshrc
+
+#创建虚拟环境
+# on macOS/Linux:
+mkvirtualenv --python=python3.6 env0
+
+workon #列出虚拟环境列表
+workon [venv] #切换环境
+
+ 退出环境
+deactivate
+# 删除环境
+rmvirtualenv venv
+```
+
+## pip install python-ldap failed due to cannot find -lldap_r
+
+<https://github.com/python-ldap/python-ldap/issues/432>
+
+```bash
+cat > /usr/lib64/libldap_r.so << EOF
+INPUT ( libldap.so )
+EOF
+```
+
+## RuntimeError: populate() isn't reentrant
+
+This is caused by a bug in your Django settings somewhere. Unfortunately, Django's hiding the bug behind this generic and un-useful error message.
+
+To reveal the true problem, open django/apps/registry.py and around line 80, replace:
+
+raise RuntimeError("populate() isn't reentrant")
+with:
+
+self.app_configs = {}
+This will allow Django to continue loading, and reveal the actual error.
+
+<https://stackoverflow.com/questions/27093746/django-stops-working-with-runtimeerror-populate-isnt-reentrant>
+
+ImportError: libcrypt.so.1: cannot open shared object file: No such file or directory
+
+```bash
+sudo pacman -S libxcrypt-compat
+
+```
