@@ -15,6 +15,7 @@ Python 3 >=3.4 这些版本的 Python 会一并安装 pip
 ## commands
 
 ```bash
+pacman -S python-pip
 # 打印包版本
 pip list
 pip install "setuptools<58.0.0"
@@ -307,7 +308,7 @@ deactivate
 ```
 
 删除环境
-没有使用virtualenvwrapper前，可以直接删除venv文件夹来删除环境
+没有使用 virtualenvwrapper 前，可以直接删除venv文件夹来删除环境
 
 ## Virtualenvwrapper
 
@@ -371,3 +372,10 @@ sudo pacman -S libxcrypt-compat
 两种执行方法的sys.path不同（注意每个path输出中的第一条），Python中的sys.path是Python用来搜索包和模块的路径。通过python -m执行一个脚本时会将当前路径加入到系统路径中,而使用python xxx.py执行脚本则会将脚本所在文件夹加入到系统路径中（如果取消inner.py中的注释会报找不到模块的错误）。
 
 <https://a7744hsc.github.io/python/2018/05/03/Run-python-script.html>
+
+## Django
+
+```bash
+python -m pip install Django
+python -m django --version
+```
