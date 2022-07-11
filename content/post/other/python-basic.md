@@ -311,7 +311,7 @@ deactivate
 
 ## Virtualenvwrapper
 
-Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
+Virtaulenvwrapper 是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
 
 ```bash
 # 安装
@@ -321,7 +321,7 @@ pip install --user virtualenvwrapper
 echo "source virtualenvwrapper.sh" >> ~/.zshrc
 source ~/.zshrc
 
-#创建虚拟环境
+# 创建虚拟环境
 # on macOS/Linux:
 mkvirtualenv --python=python3.6 env0
 
@@ -364,6 +364,7 @@ ImportError: libcrypt.so.1: cannot open shared object file: No such file or dire
 sudo pacman -S libxcrypt-compat
 
 ```
+
 ## Python -m
 
 通过python -m执行一个包内脚本会首先将执行package1的__init__.py文件，并且__package__变量被赋上相应的值；而 python xxx.py方式不会执行__init__.py并且__package__变量为None
