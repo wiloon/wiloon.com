@@ -15,6 +15,7 @@ Python 3 >=3.4 这些版本的 Python 会一并安装 pip
 ## commands
 
 ```bash
+pacman -S python-pip
 # 打印包版本
 pip list
 pip install "setuptools<58.0.0"
@@ -307,11 +308,11 @@ deactivate
 ```
 
 删除环境
-没有使用virtualenvwrapper前，可以直接删除venv文件夹来删除环境
+没有使用 virtualenvwrapper 前，可以直接删除venv文件夹来删除环境
 
 ## Virtualenvwrapper
 
-Virtaulenvwrapper是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
+Virtaulenvwrapper 是 virtualenv 的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
 
 ```bash
 # 安装
@@ -364,9 +365,17 @@ ImportError: libcrypt.so.1: cannot open shared object file: No such file or dire
 sudo pacman -S libxcrypt-compat
 
 ```
+
 ## Python -m
 
 通过python -m执行一个包内脚本会首先将执行package1的__init__.py文件，并且__package__变量被赋上相应的值；而 python xxx.py方式不会执行__init__.py并且__package__变量为None
 两种执行方法的sys.path不同（注意每个path输出中的第一条），Python中的sys.path是Python用来搜索包和模块的路径。通过python -m执行一个脚本时会将当前路径加入到系统路径中,而使用python xxx.py执行脚本则会将脚本所在文件夹加入到系统路径中（如果取消inner.py中的注释会报找不到模块的错误）。
 
 <https://a7744hsc.github.io/python/2018/05/03/Run-python-script.html>
+
+## Django
+
+```bash
+python -m pip install Django
+python -m django --version
+```
