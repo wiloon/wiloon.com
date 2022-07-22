@@ -468,14 +468,17 @@ def bar(param1, **param2):
 双星号（**）：**kwargs
 将参数以字典的形式导入
 
+```python
 >>> def bar(param1, **param2):
         print param1
         print param2
 >>> bar(1,a=2,b=3)
+```
+
 1
 {'a': 2, 'b': 3}
 
-##  元组
+## 元组
 
 Python 的元组与列表类似，不同之处在于元组的元素不能修改。
 
@@ -492,7 +495,6 @@ import logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("foo")
 logger.info('info0: %s', value)
-
 
 ## python 命名规范
 
@@ -525,3 +527,7 @@ Python中有三个去除头尾字符、空白符的函数，它们依次为:
 strip： 用来去除头尾字符、空白符(包括\n、\r、\t、’ '，即：换行、回车、制表符、空格)
 lstrip：用来去除开头字符、空白符(包括\n、\r、\t、’ '，即：换行、回车、制表符、空格)
 rstrip：用来去除结尾字符、空白符(包括\n、\r、\t、’ '，即：换行、回车、制表符、空格)
+
+## Python三目运算符
+
+exp1 if contion else exp2
