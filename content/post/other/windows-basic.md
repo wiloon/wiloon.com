@@ -200,3 +200,9 @@ powercfg.exe /hibernate on
 ## windows 命令行设置 IP
 
 <https://www.ithome.com/0/143/741.htm>
+
+## Windows Terminal
+
+<https://github.com/microsoft/terminal>
+
+Windows Terminal> Settings> Actions 可以设置快捷键,解决 vim  ctrl-v 的问题
