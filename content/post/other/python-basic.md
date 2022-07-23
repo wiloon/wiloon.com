@@ -264,11 +264,9 @@ pickle.dump(obj, file[, protocol])
 pickle.load(file)
 　　反序列化对象。将文件中的数据解析为一个Python对象。
 
-## list array
+## list array, 列表（List）
 
-准确来说Python中是没有数组类型的，只有列表(list)和元组（tuple), 数组是numpy库中所定义的，所以在使用数组之前必须下载安装numpy库。 python中的list是python的内置数据类型，list中的数据类不必相同的，而array的中的类型必须全部相同。在list中的数据类型保存的是数据的存放的地址，简单的说就是指针，并非数据，这样保存一个list就太麻烦了，例如list1=[1,2,3,'a']需要4个指针和四个数据，增加了存储和消耗cpu。numpy中封装的array有很强大的功能，里面存放的都是相同的数据类型。
-
-列表（List）
+准确来说 Python 中是没有数组类型的，只有列表(list)和元组（tuple), 数组是 numpy 库中所定义的，所以在使用数组之前必须下载安装numpy库。 python中的list是python的内置数据类型，list中的数据类不必相同的，而array的中的类型必须全部相同。在list中的数据类型保存的是数据的存放的地址，简单的说就是指针，并非数据，这样保存一个list 就太麻烦了，例如 `list1=[1,2,3,'a']` 需要4个指针和四个数据，增加了存储和消耗cpu。numpy中封装的array 有很强大的功能，里面存放的都是相同的数据类型。
 
 1.列表的特点
 
@@ -312,7 +310,7 @@ deactivate
 
 ## Virtualenvwrapper
 
-Virtaulenvwrapper 是 virtualenv 的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
+Virtaulenvwrapper 是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
 
 ```bash
 # 安装
@@ -322,7 +320,7 @@ pip install --user virtualenvwrapper
 echo "source virtualenvwrapper.sh" >> ~/.zshrc
 source ~/.zshrc
 
-#创建虚拟环境
+# 创建虚拟环境
 # on macOS/Linux:
 mkvirtualenv --python=python3.6 env0
 
@@ -378,4 +376,158 @@ sudo pacman -S libxcrypt-compat
 ```bash
 python -m pip install Django
 python -m django --version
+django-admin startproject project0
+# 每一次的访问请求重新载入一遍 Python 代码
+python manage.py runserver 0.0.0.0:8888
+python manage.py runserver 0:8000
+python manage.py startapp polls
 ```
+
+<https://www.djangoproject.com/>
+
+## djano path re_path
+
+如果遇上路径和转换器语法都不足以定义的URL模式，那么就需要使用正则表达式，这时候就需要使用re_path()，而非path()。
+
+<https://www.jianshu.com/p/cd5a91222e1e>
+
+import re re --- 正则表达式操作
+
+## python里的百分号
+
+python里百分号有2个意思，计算数的时候，它是求余数的意思；另外一个是格式化字符串的作用，如："%d %s" %(12, 'abc') 就把%d换成12， %s换成abc，得到 '12 abc'。(推荐学习：Python视频教程)
+
+第一种：数值运算 1 % 3 是指模运算, 取余数(remainder)>>> 7%2
+————————————————
+版权声明：本文为CSDN博主「谢仁慈Mercy」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：<https://blog.csdn.net/weixin_42502060/article/details/111985588>
+
+## parse.urlencode() 与parse.unquote()
+
+通过parse.unquote()方法进行解码，把 URL编码字符串，转换回原先字符串。
+
+print(parse.unquote("wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2"))
+
+## json
+
+json.dumps 将 Python 对象编码成 JSON 字符串
+json.loads 将已编码的 JSON 字符串解码为 Python 对象
+
+## dict() 字典
+
+dict() 函数用于创建一个字典
+
+python字典初始化比较常用的两种方式：dict() 和 {}
+
+性能方面，{}性能更好。
+
+Python 字典(Dictionary) update() 函数把字典 dict2 的键/值对更新到 dict 里。
+
+## isinstance()
+
+isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type()。
+
+## staticmethod
+
+python staticmethod 返回函数的静态方法。
+
+该方法不强制要求传递参数，如下声明一个静态方法：
+
+## reduce()
+
+reduce() 函数会对参数序列中元素进行累积。
+
+函数将一个数据集合（链表，元组等）中的所有数据进行下列操作：用传给 reduce 中的函数 function（有两个参数）先对集合中的第 1、2 个元素进行操作，得到的结果再与第三个数据用 function 函数运算，最后得到一个结果。
+
+## operator
+
+operator 模块提供了一套与Python的内置运算符对应的高效率函数。例如，operator.add(x, y) 与表达式 x+y 相同
+
+operator.or_(a, b)
+operator.__or__(a, b)
+返回 a 和 b 按位或的结果。
+
+## python函数参数前面单星号（*）和双星号（**）的区别
+
+在python的函数中经常能看到输入的参数前面有一个或者两个星号：例如
+
+def foo(param1, *param2):
+def bar(param1, **param2):
+这两种用法其实都是用来将任意个数的参数导入到python函数中。
+
+单星号（*）：*agrs
+将所以参数以元组(tuple)的形式导入：
+例如：
+
+>>> def foo(param1, *param2):
+        print param1
+        print param2
+>>> foo(1,2,3,4,5)
+1
+(2, 3, 4, 5)
+双星号（**）：**kwargs
+将参数以字典的形式导入
+
+```python
+>>> def bar(param1, **param2):
+        print param1
+        print param2
+>>> bar(1,a=2,b=3)
+```
+
+1
+{'a': 2, 'b': 3}
+
+## 元组
+
+Python 的元组与列表类似，不同之处在于元组的元素不能修改。
+
+元组使用小括号，列表使用方括号。
+
+元组创建很简单，只需要在括号中添加元素，并使用逗号隔开即可。
+
+## logging
+
+logging的默认级别是 warn
+
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("foo")
+logger.info('info0: %s', value)
+
+## python 命名规范
+
+1、包名：全部小写字母，中间可以由点分隔开，不推荐使用下划线。作为命名空间，包名应该具有唯一性，推荐采用公司或者组织域名的倒置，如com.apple.quicktime.v2。
+
+2、模块名：全部小写字母，如果是多个单词构成，可以用下划线隔开，如dummy_threading。
+
+3、类名：总是使用首字母大写单词串。如MyClass。内部类可以使用额外的前导下划线。
+
+类总是使用驼峰格式命名，即所有单词首字母大写其余字母小写。类名应该简明，精确，并足以从中理解类所完成的工作。常见的一个方法是使用表示其类型或者特性的后缀，例如:
+
+SQLEngine、MimeTypes。
+
+4、异常名：异常属于类，命名同类命名，但应该使用Error作为后缀。如FileNotFoundError
+
+5、变量名：变量名：全部小写，由下划线连接各个单词。如color = WHITE，this_is_a_variable = 1
+
+*注意*：
+
+1.不论是类成员变量还是全局变量，均不使用 m 或 g 前缀。
+
+2.私有类成员使用单一下划线前缀标识，如_height。多定义公开成员，少定义私有成员。
+
+3.变量名不应带有类型信息，因为Python是动态类型语言。如 iValue、names_list、dict_obj 等都是不好的命名。
+
+## strip
+
+Python中有三个去除头尾字符、空白符的函数，它们依次为:
+
+strip： 用来去除头尾字符、空白符(包括\n、\r、\t、’ '，即：换行、回车、制表符、空格)
+lstrip：用来去除开头字符、空白符(包括\n、\r、\t、’ '，即：换行、回车、制表符、空格)
+rstrip：用来去除结尾字符、空白符(包括\n、\r、\t、’ '，即：换行、回车、制表符、空格)
+
+## Python三目运算符
+
+exp1 if contion else exp2
