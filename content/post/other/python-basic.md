@@ -531,3 +531,11 @@ rstrip：用来去除结尾字符、空白符(包括\n、\r、\t、’ '，即�
 ## Python三目运算符
 
 exp1 if contion else exp2
+
+## string format
+
+```python
+txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49))
+
+```
