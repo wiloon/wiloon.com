@@ -195,12 +195,6 @@ from 模块名 import 语句：
 
 ## Python模块
 
-## celery
-
-<https://github.com/celery/celery>
-
-celery是一个基于分布式消息传输的异步任务队列，它专注于实时处理，同时也支持任务调度。它的执行单元为任务（task），利用多线程，如Eventlet，gevent等，它们能被并发地执行在单个或多个职程服务器（worker servers）上。任务能异步执行（后台运行）或同步执行（等待任务完成）。
-
 ## pip install 命令用于安装包
 
 - -U, --upgrade 更新所有指定的包到最新的可用版本。 依赖项的处理取决于所使用的升级策略
