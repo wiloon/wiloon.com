@@ -12,6 +12,15 @@ tags:
 
 Python 3 >=3.4 这些版本的 Python 会一并安装 pip
 
+## pip
+
+手动重新安装 pip
+
+```bash
+curl -O https://bootstrap.pypa.io/get-pip.py
+sudo python get-pip.py
+```
+
 ## commands
 
 ```bash
@@ -24,7 +33,8 @@ pip freeze #查看当前安装库版本
 #创建 requirements.txt 文件，其中包含了当前环境中所有包及 各自的版本的简单列表
 #保持部署相同，一键安装所有包
 pip install -r requirements.txt
-pip freeze > requirements.txt 
+pip freeze > requirements.txt
+pip uninstall kafka
 lsvirtualenv    #列举所有的环境
 cdvirtualenv    #导航到当前激活的虚拟环境的目录中，相当于pushd 目录
 cdsitepackages   # 和上面的类似，直接进入到 site-packages 目录
@@ -304,7 +314,7 @@ deactivate
 
 ## Virtualenvwrapper
 
-Virtaulenvwrapper 是virtualenv的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
+Virtaulenvwrapper 是virtualenv 的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
 
 ```bash
 # 安装
@@ -321,11 +331,15 @@ mkvirtualenv --python=python3.6 env0
 workon #列出虚拟环境列表
 workon [venv] #切换环境
 
- 退出环境
+# 退出环境
 deactivate
 # 删除环境
 rmvirtualenv venv
 ```
+
+### Pycharm
+
+settings> Project Interpreters
 
 ## pip install python-ldap failed due to cannot find -lldap_r
 
@@ -533,3 +547,94 @@ txt = "For only {price:.2f} dollars!"
 print(txt.format(price = 49))
 
 ```
+
+## 函数
+
+### 语法
+
+```python
+def functionname( parameters ):
+   "函数_文档字符串"
+   function_suite
+   return [expression]
+```
+
+### 示例
+
+```python
+def printme( str ):
+   "打印传入的字符串到标准显示设备上"
+   print str
+   return
+```
+
+## kafka
+
+```bash
+pip install kafka-python
+
+```
+
+## unit test
+
+```python
+# kafkax.py
+def send_to_kafka(msg):
+    print("send msg to kafka")
+    return
+
+# kafkatest.py
+import unittest
+
+from kafkax import send_to_kafka
+
+
+class TestKafka(unittest.TestCase):
+
+    def test_send(self):
+        send_to_kafka("foo")
+
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+## split
+
+```python
+>>> u = "www.doiido.com.cn"
+ 
+#使用默认分隔符
+>>> print u.split()
+['www.doiido.com.cn']
+ 
+#以"."为分隔符
+>>> print u.split('.')
+['www', 'doiido', 'com', 'cn']
+```
+
+## python字符串str和字节数组相互转化
+
+```python
+b = b"Hello, world!"  # bytes object  
+s = "Hello, world!"   # str object 
+
+print('str --> bytes')
+print(bytes(s, encoding="utf8"))    
+print(str.encode(s))   # 默认 encoding="utf-8"
+print(s.encode())      # 默认 encoding="utf-8"
+
+print('\nbytes --> str')
+print(str(b, encoding="utf-8"))
+
+# bytes > string
+print(bytes.decode(b))  # 默认 encoding="utf-8"
+print(b.decode())       # 默认 encoding="utf-8"
+
+```
+
+## singleten
+
+<https://www.birdpython.com/posts/1/71/>
+
+<https://stackoverflow.com/questions/6760685/creating-a-singleton-in-python?page=1&tab=scoredesc#tab-top>
