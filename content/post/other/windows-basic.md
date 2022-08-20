@@ -14,14 +14,9 @@ tags:
 
 <https://isofiles.bd581e55.workers.dev/>
 
-## win10 开机启动
+## win10 应用开机启动, 启动项
 
-```r
-win + r
-shell:startup
-将该应用的快捷方式从文件位置复制并粘贴到“启动”文件夹中。
-
-```
+打开运行 `win + r`, 输入 `shell:startup`, 将该应用的快捷方式从文件位置复制并粘贴到 “启动” 文件夹中。
 
 ### msdn i tell u
 
