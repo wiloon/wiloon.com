@@ -418,8 +418,8 @@ print(parse.unquote("wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2"))
 
 ## json
 
-json.dumps 将 Python 对象编码成 JSON 字符串
-json.loads 将已编码的 JSON 字符串解码为 Python 对象
+json.dumps 序列化, 将 Python 对象编码成 JSON 字符串
+json.loads 反序列化, 将已编码的 JSON 字符串解码为 Python 对象
 
 ## dict() 字典
 
@@ -638,3 +638,7 @@ print(b.decode())       # 默认 encoding="utf-8"
 <https://www.birdpython.com/posts/1/71/>
 
 <https://stackoverflow.com/questions/6760685/creating-a-singleton-in-python?page=1&tab=scoredesc#tab-top>
+
+## sqlalchemy
+
+<https://www.jianshu.com/p/cf97d753b117>
