@@ -570,6 +570,10 @@ def printme( str ):
 
 ## kafka
 
+python kafka ssl
+
+<https://dev.to/adityakanekar/connecting-to-kafka-cluster-using-ssl-with-python-k2e>
+
 ```bash
 pip install kafka-python
 
@@ -642,3 +646,6 @@ print(b.decode())       # 默认 encoding="utf-8"
 ## sqlalchemy
 
 <https://www.jianshu.com/p/cf97d753b117>
+
+- pool_timeout, number of seconds to wait before giving up on getting a connection from the pool
+- pool_recycle, this setting causes the pool to recycle connections after the given number of seconds has passed
