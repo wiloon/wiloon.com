@@ -649,3 +649,42 @@ print(b.decode())       # 默认 encoding="utf-8"
 
 - pool_timeout, number of seconds to wait before giving up on getting a connection from the pool
 - pool_recycle, this setting causes the pool to recycle connections after the given number of seconds has passed
+
+## python 获取 UTC 时间
+
+```python
+from datetime import datetime
+
+# time_in_utc variable will be the utc time 
+time_in_utc = datetime.utcnow()
+
+# If you want to make it more fancier:
+formatted_time_in_utc = time_in_utc.strftime("%d/%m/%Y %H:%M:%S")
+```
+
+## python：获取当前目录、上层目录路径
+
+```python
+import os
+
+
+print("===获取当前文件目录===")
+# 当前脚本工作的目录路径
+print(os.getcwd())
+# os.path.abspath()获得绝对路径
+print(os.path.abspath(os.path.dirname(__file__)))
+
+print("=== 获取当前文件上层目录 ===")
+print(os.path.abspath(os.path.dirname(os.path.dirname(__file__))))
+print(os.path.abspath(os.path.dirname(os.getcwd())))
+print(os.path.abspath(os.path.join(os.getcwd(), "..")))
+print(os.path.dirname(os.getcwd()))
+# os.path.join()连接目录名与文件或目录
+
+
+print("==== 设置路径为当前文件上层目录的test_case文件夹====")
+path = os.path.join(os.path.dirname(os.getcwd()), "test_case")
+print(path)
+```
+
+<https://www.cnblogs.com/juankai/p/11580122.html>
