@@ -385,6 +385,7 @@ sudo pacman -S libxcrypt-compat
 python -m pip install Django
 python -m django --version
 django-admin startproject project0
+
 # 每一次的访问请求重新载入一遍 Python 代码
 python manage.py runserver 0.0.0.0:8888
 python manage.py runserver 0:8000
@@ -688,3 +689,17 @@ print(path)
 ```
 
 <https://www.cnblogs.com/juankai/p/11580122.html>
+
+## ModuleNotFoundError: No module named 'xlwt'
+
+<https://pypi.org/project/xlwt/#files>
+
+<https://files.pythonhosted.org/packages/44/48/def306413b25c3d01753603b1a222a011b8621aed27cd7f89cbc27e6b0f4/xlwt-1.3.0-py2.py3-none-any.whl>
+
+从 下载好的 .whl 包安装模块 pip install foo.whl
+
+## 环境变量
+
+```python
+os.environ.get()
+```
