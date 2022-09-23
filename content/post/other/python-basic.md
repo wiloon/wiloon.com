@@ -402,16 +402,16 @@ python manage.py startapp polls
 
 import re re --- 正则表达式操作
 
-## python里的百分号
+## python 里的百分号
 
 python里百分号有2个意思，计算数的时候，它是求余数的意思；另外一个是格式化字符串的作用，如："%d %s" %(12, 'abc') 就把%d换成12， %s换成abc，得到 '12 abc'。(推荐学习：Python视频教程)
 
 第一种：数值运算 1 % 3 是指模运算, 取余数(remainder)>>> 7%2
-————————————————
+
 版权声明：本文为CSDN博主「谢仁慈Mercy」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
 原文链接：<https://blog.csdn.net/weixin_42502060/article/details/111985588>
 
-## parse.urlencode() 与parse.unquote()
+## parse.urlencode() 与 parse.unquote()
 
 通过parse.unquote()方法进行解码，把 URL编码字符串，转换回原先字符串。
 
@@ -431,6 +431,10 @@ python字典初始化比较常用的两种方式：dict() 和 {}
 性能方面，{}性能更好。
 
 Python 字典(Dictionary) update() 函数把字典 dict2 的键/值对更新到 dict 里。
+
+To delete a key regardless of whether it is in the dictionary, use the two-argument form of dict.pop():
+
+my_dict.pop('key', None)
 
 ## isinstance()
 
