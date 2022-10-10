@@ -309,12 +309,13 @@ deactivate
  
 ```
 
-删除环境
-没有使用 virtualenvwrapper 前，可以直接删除venv文件夹来删除环境
+### 删除环境
+
+没有使用 virtualenvwrapper 的情况，可以直接删除 venv 文件夹来删除环境
 
 ## Virtualenvwrapper
 
-Virtaulenvwrapper 是virtualenv 的扩展包，用于更方便管理虚拟环境，它可以做： - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
+Virtaulenvwrapper 是 virtualenv 的扩展包，用于更方便管理虚拟环境，它可以做: - 将所有虚拟环境整合在一个目录下 - 管理（新增，删除，复制）虚拟环境 - 快速切换虚拟环境
 
 ```bash
 # 安装
