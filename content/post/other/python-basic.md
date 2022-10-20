@@ -422,6 +422,8 @@ print(parse.unquote("wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2"))
 
 json.dumps 序列化, 将 Python 对象编码成 JSON 字符串
 json.loads 反序列化, 将已编码的 JSON 字符串解码为 Python 对象
+json.loads()：解析一个有效的JSON字符串并将其转换为Python字典
+json.load()：从一个文件读取JSON类型的数据，然后转转换成Python字典
 
 ## dict() 字典
 
