@@ -422,6 +422,8 @@ print(parse.unquote("wd=%E4%BC%A0%E6%99%BA%E6%92%AD%E5%AE%A2"))
 
 json.dumps 序列化, 将 Python 对象编码成 JSON 字符串
 json.loads 反序列化, 将已编码的 JSON 字符串解码为 Python 对象
+json.loads()：解析一个有效的JSON字符串并将其转换为Python字典
+json.load()：从一个文件读取JSON类型的数据，然后转转换成Python字典
 
 ## dict() 字典
 
@@ -714,3 +716,12 @@ os.environ.get()
 Python正则表达式前的 r 表示原生字符串（rawstring），该字符串声明了引号中的内容表示该内容的原始含义，避免了多次转义造成的反斜杠困扰。
 
 关于反斜杠困扰：与多数编程语言相同，正则表达式中使用“\”作为转义字符，如果需要匹配文本中的字符“\”，在正则表达式中需要4个“\”，首先，前2个“\”和后两个“\”在python解释器中分别转义成一个“\”，然后转义后的2个“\”在正则中被转义成一个“\”。
+
+## djano
+
+## get 请求参数
+
+```python
+start_time = request.GET.get('start_time', default='')
+end_time = request.GET.get('end_time', default='')
+```
