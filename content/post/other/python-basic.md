@@ -222,6 +222,13 @@ print(empty_dict)
 # 使用元组作为dict的key
 dict2 = {(20, 30):'good', 30:'bad'}
 print(dict2)
+
+#生成一个字典
+d = {'name':Tom, 'age':10, 'Tel':110}
+#打印返回值，其中d.keys()是列出字典所有的key
+print ‘name’ in d.keys()
+print 'name' in d
+#两个的结果都是返回True
 ```
 
 <http://c.biancheng.net/view/2212.html>
@@ -425,6 +432,8 @@ json.loads 反序列化, 将已编码的 JSON 字符串解码为 Python 对象
 json.loads()：解析一个有效的JSON字符串并将其转换为Python字典
 json.load()：从一个文件读取JSON类型的数据，然后转转换成Python字典
 
+obj to json <https://blog.csdn.net/mr_hui_/article/details/82941199>
+
 ## dict() 字典
 
 dict() 函数用于创建一个字典
@@ -439,6 +448,7 @@ To delete a key regardless of whether it is in the dictionary, use the two-argum
 
 my_dict.pop('key', None)
 
+obj to dict <https://blog.csdn.net/weixin_42359464/article/details/80882549>
 ## isinstance()
 
 isinstance() 函数来判断一个对象是否是一个已知的类型，类似 type()。
@@ -732,4 +742,33 @@ end_time = request.GET.get('end_time', default='')
 list1 = ['physics', 'chemistry', 1997, 2000]
 list2 = [1, 2, 3, 4, 5 ]
 list3 = ["a", "b", "c", "d"]
+```
+
+## string replace, 字符串 替换
+
+```py
+txt = "I like bananas"
+
+x = txt.replace("bananas", "apples")
+
+print(x)
+
+```
+
+## enum
+
+```py
+from enum import Enum
+class Color(Enum):
+    RED = 1
+    GREEN = 2
+    BLUE = 3
+
+# 1
+Color.RED.value
+
+# RED
+Color(1).name
+
+
 ```
