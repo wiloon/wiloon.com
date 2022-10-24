@@ -725,3 +725,11 @@ Python正则表达式前的 r 表示原生字符串（rawstring），该字符�
 start_time = request.GET.get('start_time', default='')
 end_time = request.GET.get('end_time', default='')
 ```
+
+## python list
+
+```py
+list1 = ['physics', 'chemistry', 1997, 2000]
+list2 = [1, 2, 3, 4, 5 ]
+list3 = ["a", "b", "c", "d"]
+```
