@@ -556,7 +556,10 @@ rstrip：用来去除结尾字符、空白符(包括\n、\r、\t、’ '，即�
 
 ## Python三目运算符
 
+```py
 exp1 if contion else exp2
+key0 = value0 if exp0 else value1
+```
 
 ## string format
 
@@ -771,4 +774,12 @@ Color.RED.value
 Color(1).name
 
 
+```
+
+## string
+
+### string contains
+
+```py
+"secret" in title_cased_file_content
 ```
