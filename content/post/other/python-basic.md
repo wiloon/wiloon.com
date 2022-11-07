@@ -561,13 +561,7 @@ exp1 if contion else exp2
 key0 = value0 if exp0 else value1
 ```
 
-## string format
 
-```python
-txt = "For only {price:.2f} dollars!"
-print(txt.format(price = 49))
-
-```
 
 ## 函数
 
@@ -747,16 +741,7 @@ list2 = [1, 2, 3, 4, 5 ]
 list3 = ["a", "b", "c", "d"]
 ```
 
-## string replace, 字符串 替换
 
-```py
-txt = "I like bananas"
-
-x = txt.replace("bananas", "apples")
-
-print(x)
-
-```
 
 ## enum
 
@@ -782,4 +767,45 @@ Color(1).name
 
 ```py
 "secret" in title_cased_file_content
+```
+
+## list > string join
+
+```py
+ str=[]  #有的题目要输出字符串，但是有时候list更好操作，于是可以最后list转string提交
+ for i in range(0,a):
+     str.append('M')              
+ str1=''.join(str) 
+
+```
+
+## string replace, 字符串 替换
+
+```py
+txt = "I like bananas"
+
+x = txt.replace("bananas", "apples")
+
+print(x)
+
+```
+
+## string format
+
+```python
+txt = "For only {price:.2f} dollars!"
+print(txt.format(price = 49))
+
+```
+
+## string trim
+
+```py
+>>>a=" gho stwwl "
+>>>a.lstrip()
+'gho stwwl '
+>>>a.rstrip()
+' gho stwwl'
+>>>a.strip()
+'gho stwwl'
 ```
